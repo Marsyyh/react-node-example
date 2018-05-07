@@ -1,0 +1,8 @@
+export { default as Admin } from './Admin.jsx'
+export { default as Login } from './Login.jsx'
+export { default as Logout } from './Logout.jsx'
+export { default as Policy } from './Policy.jsx'
+export { default as Role } from './Role.jsx'
+export { default as User } from './User.jsx'
+export { default as UserCreate } from './UserCreate.jsx'
+export { default as UserEdit } from './UserEdit.jsx'

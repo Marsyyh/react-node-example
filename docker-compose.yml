@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  ui:
+    build:
+      context: ./ui
+    volumes:
+      - ./ui:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5000:5000"
+    # networks:
+    #   - public
+  auth:
+    build:
+      context: ./auth
+    command: npm run dev
+    volumes:
+      - ./auth:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4998:4998"
+    # networks:
+    #   - public
+    #   - backend
+  kdm:
+    build:
+      context: ./kdm
+    command: npm run dev
+    volumes:
+      - ./kdm:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4999:4999"
+    # networks:
+    #   - public
+    #   - backend
+  # mongo:
+  #   build:
+  #     context: ./mongo
+  #   volumes:
+  #     - ./mongo/data/db:/data/db
+  #   environment:
+  #     - MONGODB_DBNAME=wbask
+  #     - MONGODB_USERNAME=askAdmin
+  #     - MONGODB_PASSWORD=pass
+  #     - MONGODB_ROOT_USERNAME=root
+  #     - MONGODB_ROOT_PASSWORD=root
+  #   ports:
+  #     - "27017:27017"
+    # networks:
+    #   - backend
+
+
+# networks:
+#   public:
+#     driver: 'bridge'
+#   backend:
+#     driver: 'bridge'

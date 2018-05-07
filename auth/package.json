@@ -1,0 +1,26 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ares.Yang@wbconsultant.com",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.6",
+    "mysql2": "^1.5.2",
+    "oauth2-server": "^3.0.0",
+    "sequelize": "^4.35.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  }
+}
