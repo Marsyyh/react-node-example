@@ -1,8 +1,6 @@
 # Description
 
-This is Admin Module POC Place.
-
-[Jira Ticket](https://wbdigital.atlassian.net/browse/ASK-1811)
+This is Admin Module Place.
 
 
 ## How to run
